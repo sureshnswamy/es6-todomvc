@@ -1,6 +1,15 @@
 /* global app, log */
+
+
 (function(window) {
   'use strict'
+  require('todomvc-app-css/index.css')
+  require('./view')
+  require('./helpers')
+  require('./controller')
+  require('./model')
+  require('./store')
+  require('./template')
 
   /**
    * Sets up a brand new Todo list.

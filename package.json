@@ -4,11 +4,22 @@
     "todomvc-app-css": "2.0.6"
   },
   "devDependencies": {
+    "babel-core": "6.13.2",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "6.13.2",
+    "babel-preset-es2016": "6.11.3",
+    "babel-preset-stage-2": "6.13.0",
+    "css-loader": "^0.28.9",
     "eslint": "3.2.2",
     "eslint-config-kentcdodds": "^9.0.0",
     "ghooks": "1.3.2",
     "http-server": "0.9.0",
-    "opt-cli": "1.5.1"
+    "opt-cli": "1.5.1",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.20.2",
+    "webpack": "3.11.0",
+    "webpack-config-utils": "^2.3.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "config": {
     "ghooks": {
@@ -16,6 +27,11 @@
     }
   },
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "webpack -p --env.prod",
+    "dev": "webpack-dev-server --env.dev",
+    "build:dev": "webpack --env.dev",
+    "prebuild:dev": "rimraf dist",
     "validate": "npm run lint",
     "start": "http-server --silent -c-1",
     "lint": "eslint ."
