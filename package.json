@@ -14,6 +14,7 @@
     "eslint-config-kentcdodds": "^9.0.0",
     "ghooks": "1.3.2",
     "http-server": "0.9.0",
+    "offline-plugin": "^4.9.0",
     "opt-cli": "1.5.1",
     "rimraf": "^2.6.2",
     "style-loader": "^0.20.2",
@@ -29,7 +30,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "webpack -p --env.prod",
-    "dev": "webpack-dev-server --env.dev",
+    "dev": "webpack-dev-server --env.dev --hot",
     "build:dev": "webpack --env.dev",
     "prebuild:dev": "rimraf dist",
     "validate": "npm run lint",
